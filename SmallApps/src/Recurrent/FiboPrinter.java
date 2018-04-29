@@ -2,7 +2,7 @@ package Recurrent;
 
 public class FiboPrinter {
     private int i;
-    private int c;
+    private final int c;
     public FiboPrinter(int i) {
         this.c = i;
         this.i = i;
