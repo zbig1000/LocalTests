@@ -3,6 +3,11 @@ package ArrayTests;
 public class DeepestPit {
 
     static class Solution {
+//        A[P] > A[P+1] > ... > A[Q] (strictly decreasing) and
+//
+//        A[Q] < A[Q+1] < ... < A[R] (strictly increasing).
+//        min{A[P] − A[Q], A[R] − A[Q]}.
+
         public int solution(int[] A) {
             int p = 0;
             int q = 0;
