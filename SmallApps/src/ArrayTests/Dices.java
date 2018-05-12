@@ -30,24 +30,24 @@ public class Dices {
         int movesRight2 = -1;
 
         int position = findInSide(pipStart, sides1);
-        if (position != -1) movesRight1 = findNumerMovesRight(sides1, position, pipTarget);
+        if (position != -1) movesRight1 = findNumberMovesRight(sides1, position, pipTarget);
 
         position = findInSide(pipStart, sides2);
-        if (position != -1) movesRight2 = findNumerMovesRight(sides2, position, pipTarget);
+        if (position != -1) movesRight2 = findNumberMovesRight(sides2, position, pipTarget);
 
         if (movesRight1 < 0) return movesRight2;
         if (movesRight2 < 0) return movesRight1;
         return Math.min(movesRight1, movesRight2);
     }
 
-    private int findNumerMovesRight(int[] side, int currentPosition, int pip) {
+    private int findNumberMovesRight(int[] side, int currentPosition, int pip) {
         for (int i = 0; i < 4; i++) {
             if (side[(currentPosition + i) % 4] == pip) return i;
         }
         return -1;
     }
 
-    private int findNumerMovesLeft(int[] side, int currentPosition, int pip) {
+    private int findNumberMovesLeft(int[] side, int currentPosition, int pip) {
         int newPosition;
         for (int i = 0; i < 4; i++) {
             newPosition = ((currentPosition - i) >= 0) ? (currentPosition - i) : (4 + currentPosition - i);
@@ -61,10 +61,10 @@ public class Dices {
         int movesLeft2 = -1;
 
         int position = findInSide(pipStart, sides1);
-        if (position != -1) movesLeft1 = findNumerMovesLeft(sides1, position, pipTarget);
+        if (position != -1) movesLeft1 = findNumberMovesLeft(sides1, position, pipTarget);
 
         position = findInSide(pipStart, sides2);
-        if (position != -1) movesLeft2 = findNumerMovesLeft(sides2, position, pipTarget);
+        if (position != -1) movesLeft2 = findNumberMovesLeft(sides2, position, pipTarget);
 
         if (movesLeft1 < 0) return movesLeft2;
         if (movesLeft2 < 0) return movesLeft1;
