@@ -44,5 +44,5 @@ public class TheSupermarketQueue2 {
 //    final PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.nCopies(n, 0));
 //        for (int customer : customers) queue.add(queue.poll() + customer);
 //        return Collections.max(queue);
-}
+
 }
