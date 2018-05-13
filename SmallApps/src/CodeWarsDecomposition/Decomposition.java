@@ -1,66 +1,30 @@
 package CodeWarsDecomposition;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
 public class Decomposition {
-
     public static String decomp(int n) {
-        List<Integer> base = new ArrayList<>();
-        List<Integer> power = new ArrayList<>();
 
-        if (n < 2) return "";
-        for (int i =2; i<=n; i++) {
-
-            for (int j = 2; j <= i; j++ ) {
-                int main_divider = i;
-                int small_divider = j;
-                while (main_divider > 1) {
-                        int divider = findDividerGreaterThan(main_divider, small_divider);
-                        addDividerToResults(divider, base, power);
-                        main_divider = main_divider / divider;
-                }
-                break;
+        int[] exponentsOfPrimes = new int[n+1];
+        while (n>1) {
+        int x = n--;
+        for (int i=2; i<=Math.sqrt(x); i++)
+            if (x % i == 0) {
+                x /= i;
+                exponentsOfPrimes[i]++;
+                i = 1;
             }
-        }
-        String result = "";
-        for (int i=0; i <base.size(); i++) {
-            result = (i == 0) ? (base.get(i) + ((power.get(i) == 1) ? ("") : ("^" + power.get(i))))
-                    : (result + " * " +base.get(i) + ((power.get(i) == 1) ? ("") : ("^" + power.get(i))));
-        }
-        return result;
+        exponentsOfPrimes[x]++;
     }
-
-    private static void addDividerToResults(int divider, List<Integer> base, List<Integer> power) {
-        int currentRecord = findDividerInResults(base, divider);
-
-        if (( currentRecord< base.size()) && (base.size() >0) && (currentRecord>=0) ) {
-            power.set(currentRecord, power.get(currentRecord) +1);
-        } else {
-            base.add(divider);
-            power.add(1);
-        }
+    StringBuilder result = new StringBuilder();
+        for (int i = 2; i < exponentsOfPrimes.length; i++) {
+        if (exponentsOfPrimes[i] == 0) continue;
+        if (exponentsOfPrimes[i] == 1) result.append(i + " * ");
+        if (exponentsOfPrimes[i] >  1) result.append(i + "^" + exponentsOfPrimes[i] + " * ");
     }
-
-    private static int findDividerGreaterThan(int source, int startingDivider) {
-        for (int i = startingDivider; i <source; i++) {
-            if ((source % i) == 0)  return i;
-        }
-        return source;
-    }
-
-    private static int findDividerInResults(List resultList, Integer divider) {
-        return Optional.ofNullable(resultList.indexOf(divider)).orElse(resultList.size());
-    }
+        return result.substring(0,result.length()-3);
+}
 
     public static void main(String args[]) {
-
-        System.out.println(decomp(25));
-
-
-
-
+        System.out.println(decomp(8));
     }
 
 }

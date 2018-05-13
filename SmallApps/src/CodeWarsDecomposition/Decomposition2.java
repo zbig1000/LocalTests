@@ -46,7 +46,7 @@ public class Decomposition2 {
     }
 
     public static void main(String args[]) {
-        System.out.println(decomp(12));
+        System.out.println(decomp(25));
     }
 
 }
