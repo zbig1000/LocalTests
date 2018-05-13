@@ -24,7 +24,7 @@ public class TheSupermarketQueue2 {
     }
 
     public static void main(String args[]) {
-        int[] testArray = {3, 4, 5};
+        int[] testArray = {3, 4, 9, 4};
         System.out.println(TheSupermarketQueue2.solveSuperMarketQueue(testArray, 2));
     }
 
