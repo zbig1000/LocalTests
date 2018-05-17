@@ -2,7 +2,7 @@ package CodeWars;
 
 import java.math.BigDecimal;
 
-public class GoingZeroOrInfinity {
+public class GoingZeroOrInfinityBigDecimal {
     public static double going(int n) {
         final BigDecimal divider = factorial(n);
         final BigDecimal muliplier = factorialSum(n);
@@ -33,16 +33,16 @@ public class GoingZeroOrInfinity {
     }
 
     public static void main(String args[]) {
-        System.out.println(GoingZeroOrInfinity.going(2));
-        System.out.println(GoingZeroOrInfinity.going(3));
-        System.out.println(GoingZeroOrInfinity.going(6));
-        System.out.println(GoingZeroOrInfinity.going(8));
-        System.out.println(GoingZeroOrInfinity.going(10));
-        System.out.println(GoingZeroOrInfinity.going(50));
-        System.out.println(GoingZeroOrInfinity.going(60));
-        System.out.println(GoingZeroOrInfinity.going(70));
-        System.out.println(GoingZeroOrInfinity.going(90));
-        System.out.println(GoingZeroOrInfinity.going(120));
+        System.out.println(GoingZeroOrInfinityBigDecimal.going(2));
+        System.out.println(GoingZeroOrInfinityBigDecimal.going(3));
+        System.out.println(GoingZeroOrInfinityBigDecimal.going(6));
+        System.out.println(GoingZeroOrInfinityBigDecimal.going(8));
+        System.out.println(GoingZeroOrInfinityBigDecimal.going(10));
+        System.out.println(GoingZeroOrInfinityBigDecimal.going(50));
+        System.out.println(GoingZeroOrInfinityBigDecimal.going(60));
+        System.out.println(GoingZeroOrInfinityBigDecimal.going(70));
+        System.out.println(GoingZeroOrInfinityBigDecimal.going(90));
+        System.out.println(GoingZeroOrInfinityBigDecimal.going(120));
     }
 
 }
