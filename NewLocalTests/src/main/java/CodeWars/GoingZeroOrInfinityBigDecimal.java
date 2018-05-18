@@ -45,4 +45,16 @@ public class GoingZeroOrInfinityBigDecimal {
         System.out.println(GoingZeroOrInfinityBigDecimal.going(120));
     }
 
+//    public static double going(int n) {
+//        BigDecimal result = BigDecimal.ZERO;
+//        BigDecimal fact = BigDecimal.ONE;
+//        for(int i = 1;i<=n;i++) {
+//            fact = fact.multiply(new BigDecimal(i));
+//            result = result.add(fact);
+//        }
+//        result = result.divide(fact, 6, BigDecimal.ROUND_DOWN);
+//        return result.doubleValue();
+//    }
+
+
 }
