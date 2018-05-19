@@ -21,7 +21,6 @@ public class OperationFactory {
                 arguments[1] = new Double(value);
                 nextOperation = (Operation) createObject(constructor, arguments);
 
-
             } catch (ClassNotFoundException ex) {
                 System.out.println("bad instruction " + ex.getMessage());
             } catch (NoSuchMethodException ex) {
@@ -36,8 +35,8 @@ public class OperationFactory {
 
         try {
             object = constructor.newInstance(arguments);
-
             return object;
+
         } catch (InstantiationException e) {
             System.out.println(e.getMessage());
         } catch (IllegalAccessException e) {

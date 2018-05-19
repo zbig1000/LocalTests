@@ -18,7 +18,7 @@ public class CalculatorReader {
             String current = new java.io.File(".").getCanonicalPath();
             System.out.println("Current dir:" + current);
 
-            fileInputStream = new BufferedReader(new FileReader("instructions1.txt"));
+            fileInputStream = new BufferedReader(new FileReader(targetFile));
 
             while (!noMoreTokens) {
                 try {

@@ -6,7 +6,17 @@ import java.util.StringTokenizer;
 public class Calculator {
 
     public static void main(String[] args) {
-        ArrayDeque arrayDeque = CalculatorReader.getArrayDeque("instructions1.txt");
+        if (args.length !=1) {
+            System.out.println("only one file allowed");
+            System.exit(0);
+        }
+
+        System.out.println("args : " + args[0]);
+        ArrayDeque arrayDeque = CalculatorReader.getArrayDeque(args[0]);
+
+
+//        ArrayDeque arrayDeque = CalculatorReader.getArrayDeque("instructions1.txt");
+
         OperationFactory operationFactory = new OperationFactory();
         Operation operation = null;
 
