@@ -1,4 +1,4 @@
-package CodeWars;
+package GoingZeroOrInfinity;
 
 public class GoingZeroOrInfinityFloat {
     public static double going(int n) {

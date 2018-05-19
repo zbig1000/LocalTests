@@ -1,4 +1,4 @@
-package CodeWars;
+package GoingZeroOrInfinity;
 
 import java.math.BigDecimal;
 
