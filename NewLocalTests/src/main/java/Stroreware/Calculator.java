@@ -14,9 +14,6 @@ public class Calculator {
         System.out.println("args : " + args[0]);
         ArrayDeque arrayDeque = CalculatorReader.getArrayDeque(args[0]);
 
-
-//        ArrayDeque arrayDeque = CalculatorReader.getArrayDeque("instructions1.txt");
-
         OperationFactory operationFactory = new OperationFactory();
         Operation operation = null;
 
