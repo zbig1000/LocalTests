@@ -11,6 +11,7 @@ public class CalculatorReader {
     private static ArrayDeque arrayDeque = new ArrayDeque();
 
     public static ArrayDeque getArrayDeque(String targetFile) {
+
         boolean noMoreTokens = false;
         StringTokenizer stringTokenizer;
 

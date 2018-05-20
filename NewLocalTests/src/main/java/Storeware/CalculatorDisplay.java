@@ -9,7 +9,6 @@ public class CalculatorDisplay {
             System.out.println("only one file allowed");
             System.exit(0);
         }
-        System.out.println("args : " + args[0]);
 
         try {
             String current = new java.io.File(".").getCanonicalPath();
@@ -18,7 +17,7 @@ public class CalculatorDisplay {
             System.out.println(ex.getMessage());
         }
 
-        Operation operation = new Calculator().getChainedOperation("");
+        Operation operation = new Calculator().getChainedOperation(args[0]);
 
         if (operation != null) {
             System.out.print("result  " + operation.getValue());
