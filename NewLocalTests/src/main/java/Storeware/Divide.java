@@ -1,4 +1,4 @@
-package Stroreware;
+package Storeware;
 
 public class Divide extends AbstractOperation {
     private Double value;

@@ -1,18 +1,12 @@
-package Stroreware;
+package Storeware;
 
 import java.util.ArrayDeque;
 import java.util.StringTokenizer;
 
 public class Calculator {
 
-    public static void main(String[] args) {
-        if (args.length !=1) {
-            System.out.println("only one file allowed");
-            System.exit(0);
-        }
-
-        System.out.println("args : " + args[0]);
-        ArrayDeque arrayDeque = CalculatorReader.getArrayDeque(args[0]);
+    public Operation getChainedOperation(String args) {
+        ArrayDeque arrayDeque = CalculatorReader.getArrayDeque(args);
 
         OperationFactory operationFactory = new OperationFactory();
         Operation operation = null;
@@ -33,8 +27,6 @@ public class Calculator {
                 operation = operationFactory.createOperation(intruction, value, operation);
             }
         }
-        if (operation != null) {
-            System.out.print("result  " + operation.getValue());
-        }
+        return operation;
     }
 }

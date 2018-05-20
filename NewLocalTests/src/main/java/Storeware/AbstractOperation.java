@@ -1,4 +1,4 @@
-package Stroreware;
+package Storeware;
 
 public class AbstractOperation implements Operation {
     private Operation operation;

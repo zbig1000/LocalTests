@@ -1,4 +1,4 @@
-package Stroreware;
+package Storeware;
 
 public class Apply implements Operation {
     private Double value;

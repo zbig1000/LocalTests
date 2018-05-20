@@ -1,4 +1,4 @@
-package Stroreware;
+package Storeware;
 
 public class InstructionNotDefinedException extends Exception {
     public InstructionNotDefinedException(String message) {

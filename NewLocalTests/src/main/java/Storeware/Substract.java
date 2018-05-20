@@ -1,4 +1,4 @@
-package Stroreware;
+package Storeware;
 
 public class Substract extends AbstractOperation {
     private double value;

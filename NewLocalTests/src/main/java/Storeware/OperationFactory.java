@@ -1,4 +1,4 @@
-package Stroreware;
+package Storeware;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -7,7 +7,7 @@ public class OperationFactory {
     public Operation createOperation(String intruction, double value, Operation existingOperation) {
         char firstLetter = intruction.toUpperCase().charAt(0);
         intruction = firstLetter + intruction.substring(1);
-        String name = "Stroreware." + intruction;
+        String name = "Storeware." + intruction;
         Operation nextOperation = null;
 
         if (intruction.equals("Apply")) return new Apply(value);

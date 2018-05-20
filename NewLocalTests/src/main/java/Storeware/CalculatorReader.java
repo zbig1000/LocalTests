@@ -1,4 +1,4 @@
-package Stroreware;
+package Storeware;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -15,9 +15,6 @@ public class CalculatorReader {
         StringTokenizer stringTokenizer;
 
         try {
-            String current = new java.io.File(".").getCanonicalPath();
-            System.out.println("Current dir:" + current);
-
             fileInputStream = new BufferedReader(new FileReader(targetFile));
 
             while (!noMoreTokens) {
